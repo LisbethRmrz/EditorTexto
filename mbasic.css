@@ -1,0 +1,105 @@
+body
+{
+    background-color: rgb(188, 195, 211);
+}
+
+tr.estilo
+{
+    margin-top: 10%;
+}
+
+.foto
+{
+    width: 60%;
+    height: 50%;
+    margin-top: 6%;
+    margin-left: 20%;
+}
+
+
+.foto
+ {
+    -webkit-transition: all .9s ease; /* Safari y Chrome */
+    -moz-transition: all .9s ease; /* Firefox */
+}
+
+.foto:hover {
+    -webkit-transform:scale(1.50);
+    -moz-transform:scale(1.50);
+    transform:scale(1.50);
+    }
+
+    .foto {/*Ancho y altura son modificables al requerimiento de cada uno*/
+
+        overflow:hidden;
+    }
+
+    section.texto
+    {
+        width: 80%;
+        margin-left: 5%;
+        margin-top: 4%;
+    }
+
+    .info
+    {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 20px;
+        color: rgb(16, 16, 129);
+    }
+
+section.titulo
+{
+    width: 80%;
+    margin-left: 33%;
+    margin-top: 4%;
+}
+
+.parrafo
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    color: rgb(16, 16, 129);
+}
+
+    /* Efecto Rectangular Inicio */
+    .overlayone{ /* Propiedades de imagen */
+        
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        }
+        .overlayinn { /* Propiedades de la transparencia */
+            margin-left: 27%;
+            margin-top: 10%;
+        background-color: rgba(20, 3, 43, 0.6);
+        width: 500px; /* ancho del contenedor de texto */
+        height: 190px; /* alto del contenedor de texto */
+        top: 25px; /*distancia hacia abajo*/
+        left: 60px; /*distancia hacia la derecha*/
+        opacity: 0; /* esta condicion mantiene el texto oculto */
+        position: absolute;
+        padding: 20px; /* espacio entre texto y bordes */
+        transition: opacity .5s;
+        text-align: center; /* texto centrado */
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 36px; /* tama�o de letra */
+        color:#f5f4ed; /* color de texto */
+        }
+        .overlayinn:hover { /* Efecto al pasar el mouse */
+        opacity: 2.5;
+        transition: opacity 1s;
+        }
+        /* Efecto Rectangular final */
+
+        .portada
+{
+    width: 100%;
+    height: 100%;
+}
+
+.inicial
+{
+    width: 100%;
+    height: 350px;
+}

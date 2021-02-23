@@ -1,0 +1,723 @@
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Editor de texto</title>
+
+      
+       
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+             <link rel="stylesheet" href="css/bootstrap.min.css">
+        <LINK REL=StyleSheet HREF="ed.css" TYPE="text/css" MEDIA=screen>
+            <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+                <LINK REL=StyleSheet HREF="bcolores.css" TYPE="text/css" MEDIA=screen>
+                <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+                <script type="text/javascript" src="Jseditor.js"></script>
+             
+  
+
+    </head>
+    <body >
+<!--Seccion de inicio y diseño-->
+<header class="inicial">
+        <img class="portada" src="Imagenes/portadaeditor.jpg">
+    </header>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      
+            <a class="navbar-brand" href="#">Opciones Avanzadas</a>
+          
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+           
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="editor.html">Opciones Basicas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="manualavanzadas.html">Manual Opciones Avanzadas</a>
+                </li>
+              </ul>
+            </div>
+          </nav> 
+
+<!--Aqui esta la seccion de la paleta de colores de texto-->
+
+<div id='texto' style='display:none;'>
+        <table class="color">
+        <tr class="trcolor">
+        <td class="tdcolor">
+            <button class="c1" onclick="color('#FF8080')"></button>
+        </td>
+        <td class="tdcolor">
+                <button class="c2" onclick="color('#FFFF80')"></button>
+            </td>
+            <td class="tdcolor">
+                    <button class="c3" onclick="color('#80FF80')"></button>
+                </td>
+
+                <td class="tdcolor">
+                        <button class="c4" onclick="color('#00FF80')"></button>
+                    </td>
+                 
+                    <td class="tdcolor">
+                        <button class="c5" onclick="color('#80FFFF')"></button>
+                    </td>
+
+                    <td class="tdcolor">
+                        <button class="c6" onclick="color('#0080FF')"></button>
+                    </td>
+
+                    <td class="tdcolor">
+                        <button class="c7" onclick="color('#FF80C0')"></button>
+                    </td>
+        
+                    <td class="tdcolor">
+                        <button class="c8" onclick="color('#FF80FF')"></button>
+                    </td>
+                </tr>
+          
+                <tr class="trcolor">
+                    <td class="tdcolor">
+                        <button class="c9" onclick="color('# FF0000')"></button>
+                    </td>
+                    <td class="tdcolor">
+                            <button class="c10" onclick="color('#FFFF00')"></button>
+                        </td>
+                        <td class="tdcolor">
+                                <button class="c11" onclick="color('#80FF00')"></button>
+                            </td>
+            
+                            <td class="tdcolor">
+                                    <button class="c12" onclick="color('#00FF40')"></button>
+                                </td>
+                             
+                                <td class="tdcolor">
+                                    <button class="c13" onclick="color('#00FFFF')"></button>
+                                </td>
+            
+                                <td class="tdcolor">
+                                    <button class="c14" onclick="color('#0080C0')"></button>
+                                </td>
+            
+                                <td class="tdcolor">
+                                    <button class="c15" onclick="color('#8080C0')"></button>
+                                </td>
+                    
+                                <td class="tdcolor">
+                                    <button class="c16" onclick="color('#FF00FF')"></button>
+                                </td>
+                            </tr>
+   
+     <tr class="trcolor">
+        <td class="tdcolor">
+            <button class="c17" onclick="color('#804040')"></button>
+        </td>
+        <td class="tdcolor">
+                <button class="c18" onclick="color('#FF8040')"></button>
+            </td>
+            <td class="tdcolor">
+                    <button class="c19" onclick="color('#00FF00')"></button>
+                </td>
+
+                <td class="tdcolor">
+                        <button class="c20" onclick="color('#008080')"></button>
+                    </td>
+                 
+                    <td class="tdcolor">
+                        <button class="c21" onclick="color('#00A480')"></button>
+                    </td>
+
+                    <td class="tdcolor">
+                        <button class="c22" onclick="color('#8080FF')"></button>
+                    </td>
+
+                    <td class="tdcolor">
+                        <button class="c23" onclick="color('#800040')"></button>
+                    </td>
+        
+                    <td class="tdcolor">
+                        <button class="c24" onclick="color('#FF0080')"></button>
+                    </td>
+                </tr>
+
+                <tr class="trcolor">
+                    <td class="tdcolor">
+                        <button class="c25" onclick="color('#800000')"></button>
+                    </td>
+                    <td class="tdcolor">
+                            <button class="c26" onclick="color('#FF8000')"></button>
+                        </td>
+                        <td class="tdcolor">
+                                <button class="c27" onclick="color('#008000')"></button>
+                            </td>
+            
+                            <td class="tdcolor">
+                                    <button class="c28" onclick="color('#008040')"></button>
+                                </td>
+                             
+                                <td class="tdcolor">
+                                    <button class="c29" onclick="color('#0000FF')"></button>
+                                </td>
+            
+                                <td class="tdcolor">
+                                    <button class="c30" onclick="color('#0000A0')"></button>
+                                </td>
+            
+                                <td class="tdcolor">
+                                    <button class="c31" onclick="color('#800080')"></button>
+                                </td>
+                    
+                                <td class="tdcolor">
+                                    <button class="c32" onclick="color('#8000FF')"></button>
+                                </td>
+                            </tr>
+                            <tr class="trcolor">
+                                <td class="tdcolor">
+                                    <button class="c33" onclick="color('#400000')"></button>
+                                </td>
+                                <td class="tdcolor">
+                                        <button class="c34" onclick="color('#804000')"></button>
+                                    </td>
+                                    <td class="tdcolor">
+                                            <button class="c35" onclick="color('#004000')"></button>
+                                        </td>
+                        
+                                        <td class="tdcolor">
+                                                <button class="c36" onclick="color('#004040')"></button>
+                                            </td>
+                                         
+                                            <td class="tdcolor">
+                                                <button class="c37" onclick="color('#000080')"></button>
+                                            </td>
+                        
+                                            <td class="tdcolor">
+                                                <button class="c38" onclick="color('#000040')"></button>
+                                            </td>
+                        
+                                            <td class="tdcolor">
+                                                <button class="c39" onclick="color('#400040')"></button>
+                                            </td>
+                                
+                                            <td class="tdcolor">
+                                                <button class="c40" onclick="color('#400080')"></button>
+                                            </td>
+                                        </tr>
+                                        <tr class="trcolor">
+                                            <td class="tdcolor">
+                                                <button class="c41" onclick="color('black')"></button>
+                                            </td>
+                                            <td class="tdcolor">
+                                                    <button class="c42" onclick="color('#808000')"></button>
+                                                </td>
+                                                <td class="tdcolor">
+                                                        <button class="c43" onclick="color('#808040')"></button>
+                                                    </td>
+                                    
+                                                    <td class="tdcolor">
+                                                            <button class="c44" onclick="color('#808080')"></button>
+                                                        </td>
+                                                     
+                                                        <td class="tdcolor">
+                                                            <button class="c45" onclick="color('#808080')"></button>
+                                                        </td>
+                                    
+                                                        <td class="tdcolor">
+                                                            <button class="c46" onclick="color('#C0C0C0')"></button>
+                                                        </td>
+                                    
+                                                        <td class="tdcolor">
+                                                            <button class="c47" onclick="color('#400040')"></button>
+                                                        </td>
+                                            
+                                                        <td class="tdcolor">
+                                                            <button class="c48" onclick="color('white')"></button>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+        </table>
+        <button class="ocultando" onclick="ocultar()">Ocultar</button>
+ </div>
+ <!--Aca termina la seccion de la paleta de colores-->
+
+ <!--Aqui esta la seccion de la paleta de colores de fondo-->
+
+<div id='fondo' style='display:none;'> 
+        <table class="color">
+       
+            <tr class="trcolor">
+                <td class="tdcolor">
+                    <button class="c1" onclick="colorFondo('#FF8080')"></button>
+                </td>
+                <td class="tdcolor">
+                        <button class="c2" onclick="colorFondo('#FFFF80')"></button>
+                    </td>
+                    <td class="tdcolor">
+                            <button class="c3" onclick="colorFondo('#80FF80')"></button>
+                        </td>
+        
+                        <td class="tdcolor">
+                                <button class="c4" onclick="colorFondo('#00FF80')"></button>
+                            </td>
+                         
+                            <td class="tdcolor">
+                                <button class="c5" onclick="colorFondo('#80FFFF')"></button>
+                            </td>
+        
+                            <td class="tdcolor">
+                                <button class="c6" onclick="colorFondo('#0080FF')"></button>
+                            </td>
+        
+                            <td class="tdcolor">
+                                <button class="c7" onclick="colorFondo('#FF80C0')"></button>
+                            </td>
+                
+                            <td class="tdcolor">
+                                <button class="c8" onclick="colorFondo('#FF80FF')"></button>
+                            </td>
+                        </tr>
+                  
+                        <tr class="trcolor">
+                            <td class="tdcolor">
+                                <button class="c9" onclick="colorFondo('# FF0000')"></button>
+                            </td>
+                            <td class="tdcolor">
+                                    <button class="c10" onclick="colorFondo('#FFFF00')"></button>
+                                </td>
+                                <td class="tdcolor">
+                                        <button class="c11" onclick="colorFondo('#80FF00')"></button>
+                                    </td>
+                    
+                                    <td class="tdcolor">
+                                            <button class="c12" onclick="colorFondo('#00FF40')"></button>
+                                        </td>
+                                     
+                                        <td class="tdcolor">
+                                            <button class="c13" onclick="colorFondo('#00FFFF')"></button>
+                                        </td>
+                    
+                                        <td class="tdcolor">
+                                            <button class="c14" onclick="colorFondo('#0080C0')"></button>
+                                        </td>
+                    
+                                        <td class="tdcolor">
+                                            <button class="c15" onclick="colorFondo('#8080C0')"></button>
+                                        </td>
+                            
+                                        <td class="tdcolor">
+                                            <button class="c16" onclick="colorFondo('#FF00FF')"></button>
+                                        </td>
+                                    </tr>
+           
+             <tr class="trcolor">
+                <td class="tdcolor">
+                    <button class="c17" onclick="colorFondo('#804040')"></button>
+                </td>
+                <td class="tdcolor">
+                        <button class="c18" onclick="colorFondo('#FF8040')"></button>
+                    </td>
+                    <td class="tdcolor">
+                            <button class="c19" onclick="colorFondo('#00FF00')"></button>
+                        </td>
+        
+                        <td class="tdcolor">
+                                <button class="c20" onclick="colorFondo('#008080')"></button>
+                            </td>
+                         
+                            <td class="tdcolor">
+                                <button class="c21" onclick="colorFondo('#00A480')"></button>
+                            </td>
+        
+                            <td class="tdcolor">
+                                <button class="c22" onclick="colorFondo('#8080FF')"></button>
+                            </td>
+        
+                            <td class="tdcolor">
+                                <button class="c23" onclick="colorFondo('#800040')"></button>
+                            </td>
+                
+                            <td class="tdcolor">
+                                <button class="c24" onclick="colorFondo('#FF0080')"></button>
+                            </td>
+                        </tr>
+        
+                        <tr class="trcolor">
+                            <td class="tdcolor">
+                                <button class="c25" onclick="colorFondo('#800000')"></button>
+                            </td>
+                            <td class="tdcolor">
+                                    <button class="c26" onclick="colorFondo('#FF8000')"></button>
+                                </td>
+                                <td class="tdcolor">
+                                        <button class="c27" onclick="colorFondo('#008000')"></button>
+                                    </td>
+                    
+                                    <td class="tdcolor">
+                                            <button class="c28" onclick="colorFondo('#008040')"></button>
+                                        </td>
+                                     
+                                        <td class="tdcolor">
+                                            <button class="c29" onclick="colorFondo('#0000FF')"></button>
+                                        </td>
+                    
+                                        <td class="tdcolor">
+                                            <button class="c30" onclick="colorFondo('#0000A0')"></button>
+                                        </td>
+                    
+                                        <td class="tdcolor">
+                                            <button class="c31" onclick="colorFondo('#800080')"></button>
+                                        </td>
+                            
+                                        <td class="tdcolor">
+                                            <button class="c32" onclick="colorFondo('#8000FF')"></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="trcolor">
+                                        <td class="tdcolor">
+                                            <button class="c33" onclick="colorFondo('#400000')"></button>
+                                        </td>
+                                        <td class="tdcolor">
+                                                <button class="c34" onclick="colorFondo('#804000')"></button>
+                                            </td>
+                                            <td class="tdcolor">
+                                                    <button class="c35" onclick="colorFondo('#004000')"></button>
+                                                </td>
+                                
+                                                <td class="tdcolor">
+                                                        <button class="c36" onclick="colorFondo('#004040')"></button>
+                                                    </td>
+                                                 
+                                                    <td class="tdcolor">
+                                                        <button class="c37" onclick="colorFondo('#000080')"></button>
+                                                    </td>
+                                
+                                                    <td class="tdcolor">
+                                                        <button class="c38" onclick="colorFondo('#000040')"></button>
+                                                    </td>
+                                
+                                                    <td class="tdcolor">
+                                                        <button class="c39" onclick="colorFondo('#400040')"></button>
+                                                    </td>
+                                        
+                                                    <td class="tdcolor">
+                                                        <button class="c40" onclick="colorFondo('#400080')"></button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="trcolor">
+                                                    <td class="tdcolor">
+                                                        <button class="c41" onclick="colorFondo('black')"></button>
+                                                    </td>
+                                                    <td class="tdcolor">
+                                                            <button class="c42" onclick="colorFondo('#808000')"></button>
+                                                        </td>
+                                                        <td class="tdcolor">
+                                                                <button class="c43" onclick="colorFondo('#808040')"></button>
+                                                            </td>
+                                            
+                                                            <td class="tdcolor">
+                                                                    <button class="c44" onclick="colorFondo('#808080')"></button>
+                                                                </td>
+                                                             
+                                                                <td class="tdcolor">
+                                                                    <button class="c45" onclick="FondoFondo('#808080')"></button>
+                                                                </td>
+                                            
+                                                                <td class="tdcolor">
+                                                                    <button class="c46" onclick="colorFondo('#C0C0C0')"></button>
+                                                                </td>
+                                            
+                                                                <td class="tdcolor">
+                                                                    <button class="c47" onclick="colorFondo('#400040')"></button>
+                                                                </td>
+                                                    
+                                                                <td class="tdcolor">
+                                                                    <button class="c48" onclick="colorFondo('white')"></button>
+                                                                </td>
+                                                            </tr>
+                                          
+
+        </table>
+        <button class="ocultando" onclick="ocultando()">Ocultar</button>
+ </div>
+ <!--Aca termina la seccion de la paleta de colores-->
+
+ <!--Aca se genra la tabla con la que trabajaremos con las funciones-->
+
+
+ <div id="ftabla" style='display:none;'>
+    <form id="ftabla">
+       <input type="text" id="cols" /> Columnas <br />
+       <input type="text" id="rows" /> Filas <br />
+       <input type="button" id="enviar" value="Crear" onclick="crear()"/>
+       <input type="button" id="limpiar" value="Limpiar" onclick="crear2()"/>
+       </form>
+       
+       <div class="div" id="resultado">
+       </div>
+       <button class="oculto" onclick="oculto()">Ocultar</button>
+   
+       </div>
+
+<!--Seccion del editor de texto-->
+
+<section class="editor" class="Centrado">
+    <!--Menu del editor-->
+       <header>
+           <ul class="nav">
+
+          <li>
+            
+               <a href ="#">Archivo</a>
+             <ul>
+                <li>
+                        
+                        <a href="#" onclick=""><span class="icon-power">   Nuevo</span>   </a>
+                        
+                </li>
+                <li>
+                        <a href="#" onclick="formato('undo')"><span class="icon-undo">   Deshacer</span>   </a>
+                </li>
+
+                <li>
+                        <a href="#" onclick="formato('redo')"><span class="icon-redo">   Rehacer</span>   </a>
+                </li>
+
+            </ul>
+
+          </li>
+
+
+          <li>
+                
+                <a href="#">Formato</a>
+                <ul>
+                        <li>
+                                <a href="#" onclick="formato('bold')"><span class="icon-bold">   Negrita</span>   </a>
+                        </li>
+                        <li>
+                                <a href="#" onclick="formato('italic')"><span class="icon-italic">   Cursiva</span>   </a>
+                        </li>
+                        <li>
+                                <a href="#" onclick="formato('underline')"><span class="icon-underline">   Subrayado</span>   </a>
+                        </li>
+                        <li>
+                                <a href="#" onclick="formato('strikethrough')"><span class="icon-strikethrough">   Tachado</span>   </a>
+                        </li>
+
+                        <li>
+                                <a href="#" onclick="formato('RemoveFormat')"><span class="icon-box-remove">   Remover Formato</span>   </a>
+                        </li>
+
+                    </ul>
+                    
+          </li>
+
+          <li>
+                <a href="#">Insertar</a>
+                
+                <ul>
+                        
+                        <li>
+                              
+                                <a href="#" onclick="insertarImagen()" ><span class="icon-image">   Imagen</span>   </a>
+                                
+                        <li>
+                                <a href="#" onclick="tabla()"><span class="icon-table">   Tabla</span>   </a>
+                        </li>
+                        <li>
+                                <a href="#" onclick="insertarEnlace()"><span class="icon-link">   Enlace</span>   </a>
+                        </li>
+                       
+                    </ul> 
+                   
+          </li>
+
+           </ul>
+       </header>
+       <!--fin del menu del editor-->
+
+<!--Herramientas del editor-->
+
+
+ <article id="tabla">
+
+          <table class="table-responsive">
+              <tr class="principal">
+                <!--Regresar-->
+           <td class="tdprinc"><button name="boton1" onclick="formato('undo')" width="20%" height="20%" >
+                <h1><span class="icon-undo" width="20%" height="20%" title="Deshacer" alt="Deshacer"></span></h1>
+                </button> </td>
+           
+           <!--Rehacer-->
+          <td class="tdprinc"> <button name="boton2" onclick="formato('redo')" width="20%" height="20%" >
+                <h1><span class="icon-redo"  width="20%" height="20%" title="Rehacer"></span></h1>
+                </button></td>
+           
+           <!--Tamaño fuente-->
+           <td class="tdprinc">
+                <select name="Tamaño Fuente">
+ 
+
+
+                        <option onclick="t1('1px')" >1px</option>
+
+                        <option onclick="t2('2px')">2px</option>
+                        
+                        <option onclick="t3('3px')">3px</option>
+
+                        <option onclick="t4('4px')">4px</option>
+
+                        <option onclick="t5('5px')">5px</option>
+
+                        <option onclick="t6('6px')">6px</option>
+
+                        <option onclick="t7('7px')">7px</option>
+                        
+                        </select>
+                        
+               </td>
+           
+           <!--Fuentes-->
+           <td class="tdprinc">
+
+                <select onchange="fuente(this[this.selectedIndex].value)">
+                        <option  value="Arial" onclick="">Arial</option>
+                        <option  value="Calibri">Calibri</option>
+                        <option  value="Comic Sans MS">Comic Sans MS</option>
+                        <option  value="Tahoma">Tahoma</option>
+                        <option  value="Times New Roman">Times New Roman</option>
+                        <option  value="Showcard Gothic">Showcard Gothic</option>
+                        <option  value="Cambria">Cambria</option>
+                        <option  value="Bradley Hand ITC">Bradley Hand ITC</option>
+                        <option  value="French Script MT">French Script MT</option>
+                        <option  value="Forte">Forte</option>
+                        <option  value="Lucida Calligraphy">Lucida Calligraphy</option> 
+                        <option  value="Wide Latin">Wide Latin</option>
+                        <option  value="Agency FB">Agency FB</option>
+                        <option  value="Arial Rounded MT Bold">Arial Rounded MT Bold</option>
+                        <option  value="Bodoni MT Poster Compressed">Bodoni MT Poster Compressed</option>
+                        
+                    </select>
+
+           </td>
+           
+           <!--Negrita-->
+
+          <td class="tdprinc"> <button name="Submit" value="N" onclick="formato('bold')">
+                <h1><span class="icon-bold" width="20%" height="20%" title="Negrita"></span></h1>
+                </button></td>
+           
+           <!--Cursiva-->
+          <td class="tdprinc"> <button name="boton6" onclick="formato('italic')" width="20%" height="20%" >
+                <h1><span class="icon-italic" width="20%" height="20%" title="Cursiva"></span></h1>
+                </button></td>
+           
+           <!--Subrayado-->
+         <td class="tdprinc">  <button name="boton7" onclick="formato('underline')" width="20%" height="20%" >
+                <h1><span class="icon-underline" width="20%" height="20%" title="Subrayado"></span></h1>
+                </button></td>
+           
+           <!--Tachado-->
+          <td class="tdprinc"> <button name="boton8" onclick="formato('strikethrough')" width="20%" height="20%" >
+                <h1><span class="icon-strikethrough" width="20%" height="20%" title="Tachado"></span></h1>
+                           </button></td>
+
+         <td class="tdprinc"> <button name="boton21" onclick="formato('RemoveFormat')" width="20%" height="20%" >
+            <h1><span class="icon-box-remove" width="20%" height="20%" title="Quitar Formato"></span></h1>
+                    </button></td>
+        
+
+                           <!--Color de texto-->
+          <td class="tdprinc"> 
+                <button onclick="mostrar()">
+                    <span class="icon-pencil" width="20%" height="20%" title="Color de texto">
+                </button>
+        </td>
+
+                        
+                           <!--Color de fondo-->
+        <td class="tdprinc"> 
+            <button onclick="mostrando()">
+            <span class="icon-droplet" width="20%" height="20%" title="Color de fondo"></span></button>
+            
+     
+        </td>
+
+              <!--Alinear izquierda-->
+           <td class="tdprinc">   <button name="boton11" onclick="formato('justifyleft')" width="20%" height="20%" >
+              <h1><span class="icon-paragraph-left" width="20%" height="20%" title="Alineado a la izquierda"></span></h1>
+            </button></td>
+
+            <!--Alinear centro-->
+          <td class="tdprinc">  <button name="boton12" onclick="formato('justifycenter')" width="20%" height="20%" >
+            <h1><span class="icon-paragraph-center" width="20%" height="20%" title="Centrado"></span></h1>
+            </button></td>
+
+                  <!--Alinear derecha-->
+          <td class="tdprinc">  <button name="boton13" onclick="formato('justifyright')" width="20%" height="20%" >
+             <h1><span class="icon-paragraph-right" width="20%" height="20%" title="Alineado a la derecha"></span></h1>
+            </button></td>
+
+                          <!--Lista-->
+       <td class="tdprinc"> <button name="boton15" onclick = "Lista('insertOrderedList')" width="20%" height="20%" >
+            <h1><span class="icon-list-numbered" width="20%" height="20%" title="Lista"></span></h1>
+                </button></td>
+
+                <!--Lista-->
+           <td class="tdprinc"> <button name="boton16" onclick = "Lista('insertUnorderedList')" width="20%" height="20%" >
+                <h1><span class="icon-list2" width="20%" height="20%" title="Lista"></span></h1>
+                </button></td>
+
+
+                <!--Insertar imagen-->
+               <td class="tdprinc"> <button type="image" value="image" onclick="insertarImagen()"  width="20%" height="20%" > 
+                    <h1><span class="icon-image" width="20%" height="20%" title="Imagen"></span></h1>
+                      </td>
+           
+
+            
+                        <!--Insertar tabla-->
+          <td class="tdprinc"> <button name="boton19" onclick="tabla()" width="20%" height="20%" >
+              <h1><span class="icon-table" width="20%" height="20%" title="Insertar tabla"></span></h1>
+
+                             
+
+                                </button></td>
+                               
+                                <!--Insertar link--> 
+         <td class="tdprinc"> <button name="boton20" onclick="insertarEnlace()" width="20%" height="20%" >
+                    <h1><span class="icon-link" width="20%" height="20%" title="Insertar Enlace"></span></h1>
+                         </button></td>
+
+ 
+                            </tr>
+                           
+                        </table>                     
+       </article>
+
+     <article id="ifr">
+       <iframe id="edit" class="edit" style=" border:1px solid rgb(97, 33, 63);"  >    </iframe>
+       
+       <table class="therramientas">
+           <tr class="principal">
+                   <!--Insertar html--> 
+                <td class="tdprinc">
+                <button name="html" onclick="inHTML()" width="20%" height="20%" > "<\>"
+                   </button> </td>
+       <div id="ht" style="width:100%; height:70%; overflow:auto; display:none"></div>
+<td class="tdprinc"><div style="margin-top:3px;"><input class="botonhtml" name="ver" type="button" id="ver" onclick="htmlOEditor(event)" value="Html" /></div>
+</td>
+</tr>
+</table>
+    </article>
+    </body>
+</html>
